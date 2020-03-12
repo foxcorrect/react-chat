@@ -1,14 +1,23 @@
 import React from 'react';
 import { Router, Route, Switch, Redirect } from 'dva/router';
-import Login from './containers/login/index'
+import Layout from './containers/view/index';
+import Overview from './containers/view/overvoew';
+import MyMine from './containers/view/mymine';
 
 function RouterConfig({ history }) {
     return (
         <div>
             <Router history={history}>
                 <Switch>
-                    <Redirect exact from="/" to="/login" ></Redirect>
-                    <Route path="/login" component={Login} />
+                    <Redirect exact from="/" to="/overview" ></Redirect>
+                    <Route path="/" render={() => (
+                        <Layout>
+                            <Switch>
+                                <Route path="/overview" component={Overview} />
+                                <Route path="/personal" component={MyMine} />
+                            </Switch>
+                        </Layout>
+                    )}></Route>
                 </Switch>
             </Router>
         </div>
