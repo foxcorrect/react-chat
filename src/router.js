@@ -15,6 +15,7 @@ function RouterConfig({ history }) {
                             <Switch>
                                 <Route path="/overview" component={Overview} />
                                 <Route path="/personal" component={MyMine} />
+                                {/* <Route path="/joinin" component={} /> */}
                             </Switch>
                         </Layout>
                     )}></Route>

@@ -1,8 +1,9 @@
 import * as React from 'react';
 import styles from './index.less';
 import '../../fonts/chat/style.css';
+import { withRouter } from 'dva/router'
 
-export default class Overview extends React.Component {
+export default withRouter(class Overview extends React.Component {
     render() {
         return (
             <div style={{ height: '100%' }}>
@@ -17,7 +18,9 @@ export default class Overview extends React.Component {
 
                 </div>
                 <div className={styles.over_container}>
-                    <div className={`${styles.display_com} ${styles.over_item}`}>
+                    <div className={`${styles.display_com} ${styles.over_item}`} onClick={() => {
+                        this.props.history.push('/joinin')
+                    }}>
                         <div className={`${styles.display_com} ${styles.flex_direction_row} ${styles.justify_content_flex_center} ${styles.align_items_center} ${styles.item_avatar}`}>
                             <span className={`${styles.avatar} ${styles.bk_edit}`}><i className="icon-edit" /></span>
                         </div>
@@ -54,4 +57,4 @@ export default class Overview extends React.Component {
             </div>
         )
     }
-}
+})
