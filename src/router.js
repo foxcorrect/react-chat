@@ -3,6 +3,7 @@ import { Router, Route, Switch, Redirect } from 'dva/router';
 import Layout from './containers/view/index';
 import Overview from './containers/view/overvoew';
 import MyMine from './containers/view/mymine';
+import AddIn from './containers/view/addin';
 
 function RouterConfig({ history }) {
     return (
@@ -15,10 +16,11 @@ function RouterConfig({ history }) {
                             <Switch>
                                 <Route path="/overview" component={Overview} />
                                 <Route path="/personal" component={MyMine} />
-                                {/* <Route path="/joinin" component={} /> */}
+                                <Route path="/joinin" component={AddIn} />
                             </Switch>
                         </Layout>
                     )}></Route>
+
                 </Switch>
             </Router>
         </div>

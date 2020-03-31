@@ -116,7 +116,8 @@
         width: 70%;
         height: 100%;
         .item_content_txt{
-            height: 48px;
+            height: 64px;
+            width: 90%;
             .item_content_title{
                 font-size: 16px;
                 font-weight: 500;
@@ -181,3 +182,34 @@
     margin: 0 auto;
     background-color: #fff;
 }
+.form{
+    width: 90%;
+    margin: 0 auto;
+    .form_item{
+        height: 85px;
+    }
+    .item_name{
+        font-size: 16px;
+        color: #121212;
+    }
+    .item_content{
+        font-size: 18px;
+        line-height: 47px;
+        color: #BFBFBF;
+        width: 100%;
+    }
+}
+.form_title{
+    font-size: 24px;
+    color: #101010;
+    margin-bottom: 10px;
+}
+.required:before{
+    content: '* ';
+    color: red;
+}
+input{
+    border: 0;
+    border-bottom: 1px solid #E9E9E9;
+}
+input:focus{ outline: 1px solid #40a9ff;}
